@@ -37,8 +37,8 @@
     {
       "action": "screenshot",
       "filename": "03-openrouter-keys.png",
-      "caption": "Step 3: The API Keys Page",
-      "desc": "This is the API Keys page. Click '+ Create Key'. Give it a name like 'My First Agent' and click Create. You'll see a long string starting with sk-or-v1-... \u2014 that's your key. COPY IT NOW and save it somewhere safe (a notes app or password manager). You only see it once."
+      "caption": "Step 3: Your API Keys Dashboard",
+      "desc": "This is what your API Keys page looks like once you have keys. Each key has a name, usage tracker, and spending limit. To create your first one: click '+ New Key' in the top right. Give it a name like 'My First Agent'. You'll see a key starting with sk-or-v1-... \u2014 COPY IT NOW and save it in a safe place (notes app or password manager). You only see it once. Notice how you can set a spending limit per key \u2014 great for keeping costs under control while you're learning."
     },
     {
       "action": "navigate",
