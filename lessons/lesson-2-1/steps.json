@@ -55,14 +55,32 @@
     {
       "action": "navigate",
       "url": "https://ai.widget.alexanderai.site",
-      "caption": "Step 5: Back to Agent Widget \u2014 You're Ready",
-      "desc": "With your API key in hand, you're ready to create your first agent."
+      "caption": "Step 5: Head to the Agent Widget",
+      "desc": "You have your OpenRouter key. Now let's see exactly where to put it. Go to the Alexander AI Agent Widget \u2014 this is where you'll create and deploy your AI agent."
     },
     {
       "action": "screenshot",
       "filename": "05-ready-to-build.png",
-      "caption": "Step 5: You Have Everything You Need",
-      "desc": "You now have: (1) an OpenRouter account, (2) an API key copied and saved, (3) access to every major AI model. Head to the Agent Widget and let's build your first agent in the next lesson."
+      "caption": "Step 5: The Agent Widget Platform",
+      "desc": "This is the platform where you'll build and deploy your AI agent. Sign up for free, then click 'Create New Agent' to get started. In the next lesson we'll write the system prompt \u2014 but first you need to know where your OpenRouter key goes."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/agent/new",
+      "caption": "Step 6: Open the New Agent Form",
+      "desc": "Click 'Create New Agent' to open the agent creation form."
+    },
+    {
+      "action": "screenshot",
+      "filename": "07-api-key-field.png",
+      "caption": "Step 6: This Is Where Your API Key Goes",
+      "desc": "See the 'OpenRouter API Key' field? This is where you paste the key you just copied from OpenRouter. It starts with sk-or-v1-... Paste it here and the Widget is powered. Your agent will use this key every time a customer sends a message \u2014 you pay OpenRouter pennies per conversation, and you control the spending limit."
+    },
+    {
+      "action": "screenshot",
+      "filename": "08-api-key-filled.png",
+      "caption": "Step 7: Key In \u2014 You're Connected",
+      "desc": "When your key is pasted in, it looks like this. The field shows your key (masked for security). Once you fill in this field and hit Create, your agent is connected to the world's best AI models. The hard part is done \u2014 in Lesson 2.2, we'll write the system prompt that makes your agent actually useful."
     }
   ]
 }
