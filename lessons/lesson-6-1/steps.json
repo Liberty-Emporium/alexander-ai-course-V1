@@ -1,0 +1,92 @@
+{
+  "lesson_id": "6-1",
+  "title": "Lesson 6.1 \u2014 Your 90-Day Roadmap",
+  "captured_at": "2026-05-04T22:40:00.000000",
+  "screenshot_count": 7,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://jay-portfolio-production.up.railway.app",
+      "caption": "Where You're Headed",
+      "desc": "This is the end of the journey \u2014 and the beginning of the real one."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-ecdash-portfolio.png",
+      "caption": "This Is What the End of This Course Looks Like",
+      "desc": "This is EcDash \u2014 Jay's portfolio dashboard showing all 14 live apps, their health, and their activity. This is what you're building toward. Not one app. A network. A business that runs itself while you sleep. You start with one app. Then you add a second. By 90 days, you'll have a portfolio. Let's map out how."
+    },
+    {
+      "action": "navigate",
+      "url": "https://web-production-8bbc54.up.railway.app",
+      "caption": "Days 1\u201330: Ship Your First App",
+      "desc": "Month one is about one thing: getting something live."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-course-platform.png",
+      "caption": "Days 1\u201330: Pick a Playbook and Ship",
+      "desc": "Days 1\u201330: Pick the playbook that fits your business. Use Module 3 to build it with AI. Deploy it on Railway. Share the URL with your first real users. Get feedback. Don't worry about perfection \u2014 worry about live. A live imperfect app beats a perfect app that never ships. Your goal: one live app with at least 5 real users before Day 30."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "Days 31\u201360: Add Your AI Agent",
+      "desc": "Month two is about adding intelligence to what you built."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-agent-widget.png",
+      "caption": "Days 31\u201360: Add an AI Agent to Your App",
+      "desc": "Days 31\u201360: Add an AI agent to your live app. Use Module 2's method \u2014 write a system prompt, plug in your OpenRouter key, embed the widget. Your agent answers questions 24/7 so you don't have to. Track how many conversations it handles. That number is the hours of your life you just got back. Goal: your agent handles at least 10 customer interactions without you."
+    },
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Days 61\u201390: Add Notifications and Go Full Auto",
+      "desc": "Month three is about making everything work while you sleep."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-sweet-spot-live.png",
+      "caption": "Days 61\u201390: Notifications, Automation, and Your Second App",
+      "desc": "Days 61\u201390: Add text and email notifications (Module 4). Automate your biggest manual task. Then start your second app \u2014 a different playbook, a different business problem. By Day 90 you'll have two live apps, one AI agent running 24/7, and automated notifications. That's a business that works while you sleep."
+    },
+    {
+      "action": "navigate",
+      "url": "https://billy-floods.up.railway.app",
+      "caption": "What Comes After 90 Days",
+      "desc": "The roadmap doesn't stop at 90 days."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-floodclaim-app.png",
+      "caption": "After 90 Days: Keep Building",
+      "desc": "After 90 days: keep going. Add Stripe payments. Build a third app. Connect them together. Help other business owners set up what you now know how to build. The method doesn't change \u2014 describe the problem, use AI to build the solution, deploy, ship, iterate. Jay built 14 apps using this exact process. There's no limit to how many problems you can solve."
+    },
+    {
+      "action": "navigate",
+      "url": "https://jay-portfolio-production.up.railway.app",
+      "caption": "You Have Everything You Need",
+      "desc": "Let's close the course."
+    },
+    {
+      "action": "screenshot",
+      "filename": "06-portfolio-final.png",
+      "caption": "\ud83c\udf89 You Did It \u2014 Now Go Build",
+      "desc": "You've made it through the Alexander AI Method. You know how to describe a business problem, use AI to build the solution, deploy it on Railway, add an AI agent, and automate your notifications. The tools are the same ones Jay used to build these 14 apps. The only difference between where you are now and where he is? Time and repetition. Go build your first one. We're rooting for you."
+    },
+    {
+      "action": "navigate",
+      "url": "https://web-production-8bbc54.up.railway.app",
+      "caption": "\ud83c\udf89 Course Complete",
+      "desc": "Back to the course homepage."
+    },
+    {
+      "action": "screenshot",
+      "filename": "07-course-complete.png",
+      "caption": "\ud83c\udf89 You Completed the Alexander AI Method",
+      "desc": "This is where you started. Now you know what's inside every lesson, every module, every screenshot. More importantly, you know how to build. Go make something real. Share it with Jay at alexanderai.site \u2014 he wants to see what you build."
+    }
+  ]
+}
