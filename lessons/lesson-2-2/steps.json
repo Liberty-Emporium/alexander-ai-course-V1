@@ -1,0 +1,71 @@
+{
+  "lesson_id": "2-2",
+  "title": "Lesson 2.2 \u2014 Writing Your System Prompt",
+  "captured_at": "2026-05-04T19:20:49.691153",
+  "screenshot_count": 5,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "Step 1: Open the Agent Widget",
+      "desc": "Navigate to the platform where we'll build."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-intro.png",
+      "caption": "What Is a System Prompt?",
+      "desc": "Before we open the form, understand this: the system prompt is the single most important thing you'll write for your AI agent. It determines everything \u2014 how it sounds, what it says, what it refuses to say, and how helpful it is. A bad system prompt = a frustrating bot. A great system prompt = a superstar employee who works 24/7."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/agent/new",
+      "caption": "Step 2: Open the New Agent Form",
+      "desc": "Navigate to the agent creation form."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-system-prompt-field.png",
+      "caption": "Step 2: The System Prompt Field",
+      "desc": "This is the System Prompt field \u2014 the big text area in the middle of the form. It's the secret instruction that shapes everything your agent says. The customer never sees it. Only the agent does. It reads this before every single conversation."
+    },
+    {
+      "action": "fill",
+      "selector": "textarea[name='system_prompt']",
+      "value": "You are Alex, the friendly AI assistant for Liberty Emporium.\n\nYOUR JOB:\n- Welcome customers warmly when they arrive\n- Answer questions about our products, hours, and policies\n- Help customers track orders if they provide their order number\n- Collect contact info from customers who want a callback\n\nTONE: Friendly, warm, professional. Not robotic. Like talking to a helpful person.\n\nRULES:\n- Never invent prices or policies \u2014 say 'Let me have our team confirm that'\n- If a customer is angry, stay calm and offer to escalate to a human\n- Keep responses under 3 sentences when possible\n- Always end with 'Is there anything else I can help you with today?'",
+      "caption": "Step 3: Filling In a Real System Prompt",
+      "desc": "Let's fill in a real system prompt together. Notice the structure: WHO (Alex, the assistant for Liberty Emporium), JOB (what it does), TONE (how it sounds), RULES (what it never does). This template works for any business \u2014 just replace the name and details with yours.",
+      "skipped": true
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-prompt-filled.png",
+      "caption": "Step 3: A Complete System Prompt",
+      "desc": "This is a complete system prompt. Notice it covers four things: Identity (who the agent is), Job (what it does), Tone (how it speaks), Rules (what it won't do). That four-part structure is all you need for 90% of business agents. Copy this template and fill in your business details."
+    },
+    {
+      "action": "navigate",
+      "url": "https://chat.openai.com",
+      "caption": "Step 4: Test Your Prompt With ChatGPT First",
+      "desc": "Before building, test your system prompt in ChatGPT.",
+      "skipped": true
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-test-with-chatgpt.png",
+      "caption": "Step 4: Pro Tip \u2014 Test Your Prompt in ChatGPT First",
+      "desc": "Here's a pro tip: before putting your system prompt into the Agent Widget, test it in ChatGPT first. Paste your prompt as the first message, then pretend to be a customer. Ask it tough questions. See how it responds. Refine it until it sounds exactly right. This saves you time and makes your live agent much better from day one."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/agent/new",
+      "caption": "Step 5: Back to Agent Widget \u2014 Ready to Build",
+      "desc": "With your tested system prompt, go back and build."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-back-to-build.png",
+      "caption": "Step 5: You Know How to Write a System Prompt",
+      "desc": "You now know the most important skill in AI agent building: how to write a system prompt that makes your agent sound exactly right for your business. In the next lesson, we deploy it live. Let's go."
+    }
+  ]
+}

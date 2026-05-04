@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}Build With AI — Alexander AI Course{% endblock %}
+{% block head %}
+<style>
+.hero{padding:6rem 1.5rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+.hero-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.15;margin-bottom:1.25rem}
+.hero-sub{color:rgba(255,255,255,.6);font-size:clamp(.95rem,2vw,1.15rem);max-width:620px;margin:0 auto 2.5rem}
+.hero-stats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-top:3.5rem}
+.stat{text-align:center}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{color:var(--muted);font-size:.82rem;margin-top:.15rem}
+
+.modules-section{padding:4rem 0}
+.modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:2.5rem}
+.mod-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.75rem;text-decoration:none;color:var(--text);display:block;transition:all .3s;position:relative;overflow:hidden}
+.mod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--mod-color,var(--accent))}
+.mod-card:hover{transform:translateY(-5px);border-color:rgba(124,58,237,.3);box-shadow:0 20px 50px rgba(0,0,0,.4);color:var(--text)}
+.mod-num{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.mod-title{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:.4rem}
+.mod-sub{color:var(--muted);font-size:.85rem;margin-bottom:1.25rem}
+.lesson-list{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.lesson-list li{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:rgba(255,255,255,.55)}
+.lesson-list li a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:.5rem}
+.lesson-list li a:hover{color:var(--text)}
+.lesson-list .has-visuals{color:#6ee7b7}
+.lesson-count{background:rgba(255,255,255,.06);border:1px solid var(--border);padding:.2rem .6rem;border-radius:999px;font-size:.72rem;font-weight:600;margin-top:1rem;display:inline-block;color:var(--muted)}
+
+.promise-section{padding:4rem 0;text-align:center}
+.promise-box{background:var(--surface);border:1px solid rgba(124,58,237,.25);border-radius:20px;padding:3rem 2rem;max-width:700px;margin:0 auto;position:relative}
+.promise-box blockquote{font-size:clamp(1rem,2.5vw,1.3rem);font-weight:600;font-family:'Space Grotesk',sans-serif;line-height:1.5;color:var(--text)}
+
+.apps-strip{padding:3rem 0;overflow:hidden}
+.apps-scroll{display:flex;gap:1rem;animation:scrollApps 20s linear infinite;width:max-content}
+.apps-scroll:hover{animation-play-state:paused}
+.app-chip{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:.5rem 1.1rem;font-size:.82rem;font-weight:600;white-space:nowrap;color:rgba(255,255,255,.7)}
+@keyframes scrollApps{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+</style>
+{% endblock %}
+{% block content %}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-orb" style="width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.12),transparent 70%);top:-100px;left:50%;transform:translateX(-50%)"></div>
+  <div style="position:relative;z-index:1">
+    <div class="pill" style="margin-bottom:1.25rem"><i class="bi bi-lightning-fill"></i> Alexander AI Method</div>
+    <h1 class="hero-title">
+      Build With AI:<br>
+      <span class="grad-text">How to Run Your Business on Agents</span>
+    </h1>
+    <p class="hero-sub">
+      Real apps. Real tools. Real results. No coding required.<br>
+      By <strong>Jay Alexander</strong> — who built 14 live apps using this exact method.
+    </p>
+    <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap">
+      <a href="#modules" class="btn btn-primary"><i class="bi bi-play-circle-fill"></i> Start Learning</a>
+      <a href="/lesson/1-1" class="btn btn-outline"><i class="bi bi-eye"></i> Preview Lesson 1</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Modules</div></div>
+      <div class="stat"><div class="stat-num">{{ modules | sum(attribute='lessons'|length) if modules else '9' }}+</div><div class="stat-label">Lessons</div></div>
+      <div class="stat"><div class="stat-num">83</div><div class="stat-label">Visual Screenshots</div></div>
+      <div class="stat"><div class="stat-num">14</div><div class="stat-label">Live Apps as Proof</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Apps strip -->
+<div class="apps-strip">
+  <div style="max-width:100%;overflow:hidden">
+    <div class="apps-scroll">
+      {% set chips = ['🍰 Sweet Spot Cakes','🏠 FloodClaim Pro','🐾 Pet Vet AI','🔨 Contractor Pro AI','📦 Drop Shipping','📋 Consignment Solutions','🏥 Liberty Inventory','💼 Alexander AI Voice','📊 EcDash','🛒 List It Everywhere','🤖 AI Agent Widget','💡 Liberty Oil & Propane','🏋️ GymForge','👩 Grace AI'] %}
+      {% for chip in chips %}<div class="app-chip">{{ chip }}</div>{% endfor %}
+      {% for chip in chips %}<div class="app-chip">{{ chip }}</div>{% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Promise -->
+<section class="promise-section">
+  <div class="container">
+    <div class="promise-box">
+      <div class="pill" style="margin-bottom:1.25rem;justify-content:center"><i class="bi bi-shield-check-fill"></i> Course Promise</div>
+      <blockquote>
+        "By the end of this course, you will have built a real AI-powered tool for your business —
+        not a demo, not a prototype. <span class="grad-text">Something you actually use.</span>"
+      </blockquote>
+      <p style="color:var(--muted);font-size:.88rem;margin-top:1rem">— Jay Alexander, Alexander AI Integrated Solutions</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modules -->
+<section class="modules-section" id="modules">
+  <div class="container">
+    <div class="pill" style="margin-bottom:.75rem"><i class="bi bi-collection-fill"></i> Course Curriculum</div>
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:.4rem">6 Modules. Built to ship.</h2>
+    <p style="color:var(--muted);font-size:.95rem">Every module ends with something real — not homework, not theory. You build it, you keep it.</p>
+    <div class="modules-grid">
+      {% for mod in modules %}
+      <a href="/module/{{ mod.id }}" class="mod-card" style="--mod-color:{{ mod.color }}">
+        <div class="mod-num">Module {{ mod.id }}</div>
+        <div class="mod-title">{{ mod.title }}</div>
+        <div class="mod-sub">{{ mod.subtitle }}</div>
+        <ul class="lesson-list">
+          {% for lesson in mod.lessons %}
+          <li>
+            <a href="/lesson/{{ lesson.id }}" onclick="event.stopPropagation()">
+              <i class="bi bi-play-circle {% if lesson.id not in ['6-1'] %}has-visuals{% endif %}"></i>
+              {{ lesson.title }}
+            </a>
+            <span style="margin-left:auto;font-size:.72rem;color:var(--muted)">{{ lesson.duration }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="lesson-count">{{ mod.lessons | length }} lesson{{ 's' if mod.lessons | length != 1 }}</div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}{{ meta.title }} — Build With AI{% endblock %}
+{% block head %}
+<style>
+.lesson-header{padding:3.5rem 1.5rem 2.5rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--muted);margin-bottom:1rem;flex-wrap:wrap}
+.breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:var(--text)}
+.breadcrumb span{color:rgba(255,255,255,.25)}
+.lesson-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:800;margin-bottom:.5rem}
+.lesson-meta-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:.75rem}
+.meta-chip{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.05);border:1px solid var(--border);padding:.3rem .75rem;border-radius:999px;font-size:.78rem;color:var(--muted)}
+
+.steps-container{max-width:860px;margin:0 auto;padding:2.5rem 1.5rem}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:1.5rem;transition:border-color .2s}
+.step-card:hover{border-color:rgba(124,58,237,.3)}
+.step-card.milestone{border-color:rgba(34,197,94,.3);background:rgba(22,35,18,.6)}
+.step-header{display:flex;align-items:center;gap:.75rem;padding:.9rem 1.2rem;border-bottom:1px solid var(--border)}
+.step-num{background:var(--grad);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;flex-shrink:0}
+.milestone .step-num{background:linear-gradient(135deg,#16a34a,#15803d);font-size:1rem}
+.step-caption{font-size:.95rem;font-weight:600;color:var(--text)}
+.step-img{width:100%;display:block;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#0a0c14;cursor:zoom-in}
+.step-img:hover{opacity:.96}
+.step-desc{padding:.9rem 1.2rem;font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+.no-img{background:#0d0d1a;padding:1.5rem;text-align:center;color:rgba(255,255,255,.2);font-size:.82rem;font-style:italic;border-top:1px solid var(--border)}
+
+.coming-soon-box{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:3rem;text-align:center;max-width:560px;margin:3rem auto}
+.coming-soon-box h3{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:.75rem}
+
+.nav-between{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap}
+.nav-btn{display:flex;align-items:center;gap:.5rem;padding:.7rem 1.25rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:var(--muted);font-size:.88rem;font-weight:500;transition:all .2s;max-width:280px}
+.nav-btn:hover{color:var(--text);border-color:rgba(124,58,237,.3);background:rgba(124,58,237,.08)}
+.nav-btn-title{font-size:.78rem;color:var(--muted);display:block}
+.nav-btn-lesson{color:var(--text);font-weight:600;font-size:.88rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* Image zoom modal */
+.img-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out}
+.img-modal.open{display:flex}
+.img-modal img{max-width:95vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,.8)}
+.img-modal-close{position:absolute;top:1.25rem;right:1.5rem;background:none;border:none;color:white;font-size:2rem;cursor:pointer;opacity:.7}
+.img-modal-close:hover{opacity:1}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="lesson-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/"><i class="bi bi-house-fill"></i></a>
+      <span>/</span>
+      <a href="/module/{{ meta.module_id }}">Module {{ meta.module_id }}: {{ meta.module_title }}</a>
+      <span>/</span>
+      <span style="color:var(--text)">{{ meta.title }}</span>
+    </div>
+    <h1 class="lesson-title">{{ meta.title }}</h1>
+    <div class="lesson-meta-row">
+      <span class="meta-chip"><i class="bi bi-collection"></i> Module {{ meta.module_id }}</span>
+      <span class="meta-chip"><i class="bi bi-clock"></i> {{ meta.duration }}</span>
+      {% if steps_data %}
+      <span class="meta-chip"><i class="bi bi-camera"></i> {{ steps_data.steps | selectattr('filename') | list | length }} screenshots</span>
+      {% endif %}
+      <span class="meta-chip" style="background:rgba(124,58,237,.15);border-color:rgba(124,58,237,.3);color:#c4b5fd"><i class="bi bi-lightning-fill"></i> Visual walkthrough</span>
+    </div>
+  </div>
+</div>
+
+<div class="steps-container">
+
+  {% if steps_data and steps_data.steps %}
+    {% set step_num = namespace(val=0) %}
+    {% for step in steps_data.steps %}
+      {% if step.action in ('screenshot',) and step.caption %}
+        {% set is_milestone = '🎉' in step.caption %}
+        {% if not is_milestone %}{% set step_num.val = step_num.val + 1 %}{% endif %}
+        <div class="step-card {% if is_milestone %}milestone{% endif %}">
+          <div class="step-header">
+            <div class="step-num">{% if is_milestone %}🎉{% else %}{{ step_num.val }}{% endif %}</div>
+            <span class="step-caption">{{ step.caption }}</span>
+          </div>
+          {% if step.filename %}
+          <img src="/lessons/{{ lesson_id }}/{{ step.filename }}"
+               alt="{{ step.caption }}"
+               class="step-img"
+               onclick="openZoom(this.src)"
+               loading="lazy">
+          {% else %}
+          <div class="no-img">Screenshot not available</div>
+          {% endif %}
+          {% if step.desc %}
+          <div class="step-desc">{{ step.desc }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  {% else %}
+    <div class="coming-soon-box">
+      <div style="font-size:3rem;margin-bottom:1rem">🚧</div>
+      <h3>Lesson Coming Soon</h3>
+      <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.5rem">
+        This lesson is being prepared. Check back soon — or start with a lesson that's already live!
+      </p>
+      <a href="/#modules" class="btn btn-primary btn-sm"><i class="bi bi-grid"></i> Browse All Modules</a>
+    </div>
+  {% endif %}
+
+  <!-- Prev / Next -->
+  <div class="nav-between">
+    <div>
+      {% if prev_id and prev_meta %}
+      <a href="/lesson/{{ prev_id }}" class="nav-btn">
+        <i class="bi bi-arrow-left"></i>
+        <div>
+          <span class="nav-btn-title">Previous</span>
+          <span class="nav-btn-lesson">{{ prev_meta.title }}</span>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+    <div>
+      {% if next_id and next_meta %}
+      <a href="/lesson/{{ next_id }}" class="nav-btn" style="flex-direction:row-reverse;text-align:right">
+        <i class="bi bi-arrow-right"></i>
+        <div>
+          <span class="nav-btn-title">Next</span>
+          <span class="nav-btn-lesson">{{ next_meta.title }}</span>
+        </div>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+
+<!-- Zoom modal -->
+<div class="img-modal" id="imgModal" onclick="closeZoom()">
+  <button class="img-modal-close" onclick="closeZoom()">×</button>
+  <img id="modalImg" src="" alt="">
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>
+function openZoom(src){const m=document.getElementById('imgModal');document.getElementById('modalImg').src=src;m.classList.add('open');document.body.style.overflow='hidden'}
+function closeZoom(){document.getElementById('imgModal').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeZoom()})
+</script>
+{% endblock %}

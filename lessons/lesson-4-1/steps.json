@@ -1,0 +1,83 @@
+{
+  "lesson_id": "4-1",
+  "title": "Lesson 4.1 \u2014 Customer Notifications: Text & Email",
+  "captured_at": "2026-05-04T19:21:57.962760",
+  "screenshot_count": 6,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Step 1: The Business Problem We're Solving",
+      "desc": "Sweet Spot Cakes \u2014 orders come in, but customers need to know their status."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-sweet-spot-orders.png",
+      "caption": "Step 1: The Problem \u2014 Manual Follow-Up Is Exhausting",
+      "desc": "Right now, when a cake order comes in and is ready, the business owner has to text or call the customer manually. Every. Single. Time. We're going to automate that. When an order status changes to 'Ready', the customer gets an automatic text message AND email. Zero manual work."
+    },
+    {
+      "action": "navigate",
+      "url": "https://www.twilio.com",
+      "caption": "Step 2: Twilio \u2014 Your Text Message Engine",
+      "desc": "Twilio is the service that sends text messages from your app.",
+      "skipped": true
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-twilio-home.png",
+      "caption": "Step 2: Twilio \u2014 Text Messaging for Your App",
+      "desc": "Twilio is what sends text messages from your app to your customers. It's used by Uber, Airbnb, and millions of small businesses. Free trial available \u2014 no credit card needed to start. Sign up, and Twilio gives you a phone number and $15 in free credits. That's 500+ free text messages to test with."
+    },
+    {
+      "action": "navigate",
+      "url": "https://www.twilio.com/try-twilio",
+      "caption": "Step 3: Sign Up for Twilio",
+      "desc": "Create your Twilio account.",
+      "skipped": true
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-twilio-signup.png",
+      "caption": "Step 3: Sign Up for a Free Twilio Account",
+      "desc": "Create your free account. Twilio will give you: (1) A trial phone number to send texts from, (2) An Account SID (your username), (3) An Auth Token (your password). Save all three. We'll add them to your app's environment variables on Railway."
+    },
+    {
+      "action": "navigate",
+      "url": "https://sendgrid.com",
+      "caption": "Step 4: SendGrid \u2014 Your Email Engine",
+      "desc": "SendGrid handles transactional emails from your app.",
+      "skipped": true
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-sendgrid-home.png",
+      "caption": "Step 4: SendGrid \u2014 Email Notifications From Your App",
+      "desc": "SendGrid sends emails from your app to your customers. It's free for up to 100 emails/day \u2014 more than enough for most small businesses to start. You'll set up one API key and it handles all your order confirmation and notification emails automatically."
+    },
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Step 5: Back to the App \u2014 What We're Adding",
+      "desc": "Let's see the app with notifications in mind."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-notification-flow.png",
+      "caption": "Step 5: The Notification Flow We're Building",
+      "desc": "Here's what we're building: (1) Customer places order \u2192 they get a confirmation email automatically, (2) Owner marks order as 'Ready' \u2192 customer gets a text message + email, (3) Order hasn't been paid? \u2192 reminder text goes out automatically after 24 hours. Three automations. Zero manual work. Let's build it."
+    },
+    {
+      "action": "navigate",
+      "url": "https://contractor-pro-ai-production.up.railway.app",
+      "caption": "Step 6: Same Pattern on Contractor Pro",
+      "desc": "This notification pattern works on any app."
+    },
+    {
+      "action": "screenshot",
+      "filename": "06-contractor-notifications.png",
+      "caption": "Step 6: Notifications Work on Every App You Build",
+      "desc": "This same pattern works on every app in your portfolio. Contractor Pro: job received \u2192 send text, quote approved \u2192 send email. Drop Shipping: order shipped \u2192 send tracking text. Any app with a status change or a form submission can trigger a notification. Learn it once, use it everywhere."
+    }
+  ]
+}

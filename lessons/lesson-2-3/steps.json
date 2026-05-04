@@ -1,0 +1,182 @@
+{
+  "lesson_id": "2-3",
+  "title": "Lesson 2.3 \u2014 Deploying Your Agent (Live in 20 Minutes)",
+  "captured_at": "2026-05-04T18:34:09.162597",
+  "screenshot_count": 14,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "Step 1: Go to the AI Agent Widget platform",
+      "desc": "This is where you create and manage your AI agents."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-homepage.png",
+      "caption": "Step 1: The AI Agent Widget Homepage",
+      "desc": "This is the homepage. Notice it says 'Add an AI Agent to Any Website in 60 Seconds' \u2014 that's exactly what we're going to do. Click 'Login' in the top right to get started."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/login",
+      "caption": "Step 2: Go to the Login Page",
+      "desc": "Navigate to the login page."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-login-page.png",
+      "caption": "Step 2: The Login Page",
+      "desc": "Enter the email and password your instructor set up for you. For course participants, accounts are pre-created. Type your email in the top field and your password below it."
+    },
+    {
+      "action": "fill",
+      "selector": "input[name='email']",
+      "value": "course.student@alexanderai.site",
+      "caption": "Step 3: Enter your email",
+      "desc": "Type your email address."
+    },
+    {
+      "action": "fill",
+      "selector": "input[name='password']",
+      "value": "CourseDemo2026!",
+      "caption": "Step 4: Enter your password",
+      "desc": "Type your password."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-login-filled.png",
+      "caption": "Step 4: Login details filled in",
+      "desc": "Both fields are filled in. Now click Sign In to go to your dashboard."
+    },
+    {
+      "action": "click",
+      "selector": "button[type='submit']",
+      "caption": "Step 5: Click Sign In",
+      "desc": "Click the button. You'll be taken to your dashboard."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-dashboard.png",
+      "caption": "Step 5: Your Dashboard",
+      "desc": "Welcome to your dashboard! This is where all your agents live. It's empty right now \u2014 that's fine. By the end of this lesson, your first agent will appear here. Click 'New Agent' to get started."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/agent/new",
+      "caption": "Step 6: Open the New Agent Form",
+      "desc": "Navigate to the create agent form."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-new-agent-form.png",
+      "caption": "Step 6: The Agent Creation Form",
+      "desc": "This form is where you configure everything about your agent. Take a moment to look at what's here: Agent Name, Tagline, Brand Color, Avatar Emoji, System Prompt, AI Model, and API Key. We'll fill each one in together."
+    },
+    {
+      "action": "fill",
+      "selector": "input[name='name']",
+      "value": "Aria",
+      "caption": "Step 7: Name your agent",
+      "desc": "Give your agent a name. We're using 'Aria' for this demo. Yours should match your brand \u2014 'Max', 'Sophie', 'Alex', or just 'Assistant'. This name appears in the chat header your customers see."
+    },
+    {
+      "action": "fill",
+      "selector": "input[name='tagline']",
+      "value": "Here to help you 24/7",
+      "caption": "Step 8: Add a tagline",
+      "desc": "The tagline is a short welcome line that appears under your agent's name. Keep it warm \u2014 'Here to help!', 'Ask me anything', 'Your 24/7 assistant'."
+    },
+    {
+      "action": "screenshot",
+      "filename": "06-name-tagline-filled.png",
+      "caption": "Step 8: Name and Tagline filled in",
+      "desc": "Good \u2014 your agent has a name and tagline. Now the most important part: the System Prompt. It's the text box below. Scroll down to see it."
+    },
+    {
+      "action": "fill",
+      "selector": "textarea[name='system_prompt']",
+      "value": "You are Aria, the friendly AI assistant for Demo Business.\n\nYOUR JOB:\n- Welcome every customer warmly\n- Answer questions about our products and services\n- Collect the customer's name and phone number if they need follow-up\n- Be helpful, concise, and professional\n\nYOUR RULES:\n- Never make up prices \u2014 say 'I'll have someone confirm that for you'\n- If you don't know something, say 'Let me have our team follow up with you'\n- Keep responses short and easy to read\n- Always end with an offer to help further",
+      "caption": "Step 9: Write your System Prompt",
+      "desc": "The System Prompt is your agent's job description \u2014 the most important field in this form. It tells the AI who it is, what it does, and how to behave. Think of it like writing an employee handbook for a new hire on their first day."
+    },
+    {
+      "action": "screenshot",
+      "filename": "07-system-prompt-filled.png",
+      "caption": "Step 9: System Prompt entered",
+      "desc": "Notice the structure: WHO the agent is (Aria), WHAT it does (welcome, answer, collect info), and the RULES it follows (no made-up prices, keep it short). This structure works for any business \u2014 just swap in your details."
+    },
+    {
+      "action": "click",
+      "selector": "#emojiTrigger",
+      "caption": "Step 10: Open the Emoji Picker",
+      "desc": "Click the Avatar Emoji button to open the picker."
+    },
+    {
+      "action": "screenshot",
+      "filename": "08-emoji-picker-open.png",
+      "caption": "Step 10: Choose Your Avatar Emoji",
+      "desc": "The emoji picker shows categories across the top \u2014 Faces, People, Animals, Food, and more. Click any emoji to select it. Pick something that fits your brand: robot for tech, flower for a spa, cake for a bakery, house for real estate. This emoji appears in the chat widget header."
+    },
+    {
+      "action": "click",
+      "selector": "#emojiGrid button:first-child",
+      "caption": "Step 10b: Select an emoji",
+      "desc": "Click any emoji to select it. The picker closes and your choice is saved."
+    },
+    {
+      "action": "screenshot",
+      "filename": "09-model-selection.png",
+      "caption": "Step 11: Choose Your AI Model",
+      "desc": "Here you choose which AI brain powers your agent. GPT-4o Mini is the best starting point for most businesses \u2014 it's fast, affordable, and great at customer conversations. You can always switch to a more powerful model like Claude or GPT-4o later as your needs grow."
+    },
+    {
+      "action": "screenshot",
+      "filename": "10-api-key-field.png",
+      "caption": "Step 12: Enter Your OpenRouter API Key",
+      "desc": "This is the only field requiring setup outside this app. Your OpenRouter API key connects your agent to the AI models. Getting one is free and takes 2 minutes: (1) Go to openrouter.ai/keys, (2) Sign up with Google or email, (3) Click 'Create Key', (4) Copy it and paste it here. Your key is stored encrypted and never shared."
+    },
+    {
+      "action": "fill",
+      "selector": "input[name='api_key']",
+      "value": "sk-or-v1-course-demo-illustration-key",
+      "caption": "Step 12b: Paste your API key",
+      "desc": "Paste your OpenRouter API key. It will show as dots once you click away \u2014 that's correct, it's stored securely."
+    },
+    {
+      "action": "screenshot",
+      "filename": "11-api-key-entered.png",
+      "caption": "Step 12: API Key entered",
+      "desc": "The key shows as dots for security. The Allowed Origins field is set to * by default \u2014 leave it as-is. This means your agent works on any website. You can lock it to your specific domain later once you know where you're embedding it."
+    },
+    {
+      "action": "screenshot",
+      "filename": "12-ready-to-create.png",
+      "caption": "Step 13: Everything Set \u2014 Click Create Agent",
+      "desc": "All fields are filled: Name, Tagline, System Prompt, Emoji, AI Model, and API Key. One click and your agent goes live on the internet. Click the purple 'Create Agent' button."
+    },
+    {
+      "action": "click",
+      "selector": "button[type='submit']",
+      "caption": "Step 13: Clicking Create Agent...",
+      "desc": "Submitting the form now."
+    },
+    {
+      "action": "screenshot",
+      "filename": "13-agent-created.png",
+      "caption": "Step 13: Agent Created",
+      "desc": "Your agent has been created. You'll see the agent detail page with its configuration and a public chat link."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site/dashboard",
+      "caption": "Step 14: Back to Dashboard",
+      "desc": "Navigate back to the dashboard."
+    },
+    {
+      "action": "screenshot",
+      "filename": "14-dashboard-with-agent.png",
+      "caption": "Step 14: Your Dashboard with Your First Agent",
+      "desc": "Your agent now lives on your dashboard. You can click it to edit, view analytics, get the embed code, or share the public chat link. Every agent you build in this course will appear here."
+    }
+  ]
+}

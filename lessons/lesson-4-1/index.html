@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4.1 — Customer Notifications: Text & Email — Alexander AI Course</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .header p { font-size: 1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .intro-box {
+    background: #1e2535;
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro-box h2 { font-size: 1.1rem; color: #a5b4fc; margin-bottom: 0.5rem; }
+  .intro-box p { color: #94a3b8; font-size: 0.92rem; }
+  .steps-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .step-card {
+    background: #1e2535;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .step-card:hover { border-color: rgba(99,102,241,0.4); }
+  .step-card.milestone {
+    border-color: rgba(34,197,94,0.5);
+    background: #0f1e12;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step-num {
+    background: #6366f1;
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.82rem; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .milestone .step-num {
+    background: #16a34a;
+    font-size: 0.9rem;
+  }
+  .step-caption { font-size: 1rem; font-weight: 600; color: #f1f5f9; }
+  .screenshot {
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #0a0c14;
+  }
+  .step-desc {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    color: #374151;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 3rem;
+  }
+  .tip-box {
+    background: #172033;
+    border-left: 3px solid #6366f1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .tip-box strong { color: #a5b4fc; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">BUILD WITH AI — Alexander AI Method</div>
+  <h1>Lesson 4.1 — Customer Notifications: Text & Email</h1>
+  <p>Automatically notify customers when their order is ready — and remind them to pay</p>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    <h2>What You'll Do In This Lesson</h2>
+    <p>Follow each step exactly as shown. Every screenshot is taken from the real app you'll be using.
+    By the end of this lesson, you'll have completed the action shown in the title above.</p>
+  </div>
+
+  <div class="steps-grid">
+    
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">1</span>
+                <h3 class="step-caption">Step 1: The Business Problem We're Solving</h3>
+            </div>
+            
+            <p class="step-desc">Sweet Spot Cakes — orders come in, but customers need to know their status.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">2</span>
+                <h3 class="step-caption">Step 1: The Problem — Manual Follow-Up Is Exhausting</h3>
+            </div>
+            <img src="01-sweet-spot-orders.png" alt="Step 1: The Problem — Manual Follow-Up Is Exhausting" class="screenshot" />
+            <p class="step-desc">Right now, when a cake order comes in and is ready, the business owner has to text or call the customer manually. Every. Single. Time. We're going to automate that. When an order status changes to 'Ready', the customer gets an automatic text message AND email. Zero manual work.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">3</span>
+                <h3 class="step-caption">Step 2: Twilio — Your Text Message Engine</h3>
+            </div>
+            
+            <p class="step-desc">Twilio is the service that sends text messages from your app.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">4</span>
+                <h3 class="step-caption">Step 2: Twilio — Text Messaging for Your App</h3>
+            </div>
+            <img src="02-twilio-home.png" alt="Step 2: Twilio — Text Messaging for Your App" class="screenshot" />
+            <p class="step-desc">Twilio is what sends text messages from your app to your customers. It's used by Uber, Airbnb, and millions of small businesses. Free trial available — no credit card needed to start. Sign up, and Twilio gives you a phone number and $15 in free credits. That's 500+ free text messages to test with.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">5</span>
+                <h3 class="step-caption">Step 3: Sign Up for Twilio</h3>
+            </div>
+            
+            <p class="step-desc">Create your Twilio account.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">6</span>
+                <h3 class="step-caption">Step 3: Sign Up for a Free Twilio Account</h3>
+            </div>
+            <img src="03-twilio-signup.png" alt="Step 3: Sign Up for a Free Twilio Account" class="screenshot" />
+            <p class="step-desc">Create your free account. Twilio will give you: (1) A trial phone number to send texts from, (2) An Account SID (your username), (3) An Auth Token (your password). Save all three. We'll add them to your app's environment variables on Railway.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">7</span>
+                <h3 class="step-caption">Step 4: SendGrid — Your Email Engine</h3>
+            </div>
+            
+            <p class="step-desc">SendGrid handles transactional emails from your app.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">8</span>
+                <h3 class="step-caption">Step 4: SendGrid — Email Notifications From Your App</h3>
+            </div>
+            <img src="04-sendgrid-home.png" alt="Step 4: SendGrid — Email Notifications From Your App" class="screenshot" />
+            <p class="step-desc">SendGrid sends emails from your app to your customers. It's free for up to 100 emails/day — more than enough for most small businesses to start. You'll set up one API key and it handles all your order confirmation and notification emails automatically.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">9</span>
+                <h3 class="step-caption">Step 5: Back to the App — What We're Adding</h3>
+            </div>
+            
+            <p class="step-desc">Let's see the app with notifications in mind.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">10</span>
+                <h3 class="step-caption">Step 5: The Notification Flow We're Building</h3>
+            </div>
+            <img src="05-notification-flow.png" alt="Step 5: The Notification Flow We're Building" class="screenshot" />
+            <p class="step-desc">Here's what we're building: (1) Customer places order → they get a confirmation email automatically, (2) Owner marks order as 'Ready' → customer gets a text message + email, (3) Order hasn't been paid? → reminder text goes out automatically after 24 hours. Three automations. Zero manual work. Let's build it.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">11</span>
+                <h3 class="step-caption">Step 6: Same Pattern on Contractor Pro</h3>
+            </div>
+            
+            <p class="step-desc">This notification pattern works on any app.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">12</span>
+                <h3 class="step-caption">Step 6: Notifications Work on Every App You Build</h3>
+            </div>
+            <img src="06-contractor-notifications.png" alt="Step 6: Notifications Work on Every App You Build" class="screenshot" />
+            <p class="step-desc">This same pattern works on every app in your portfolio. Contractor Pro: job received → send text, quote approved → send email. Drop Shipping: order shipped → send tracking text. Any app with a status change or a form submission can trigger a notification. Learn it once, use it everywhere.</p>
+        </div>
+        
+  </div>
+
+  <div class="tip-box">
+    <strong>Tip:</strong> If something looks slightly different on your screen, the app may have been
+    updated. The core steps are always the same — look for the same buttons and fields.
+  </div>
+</div>
+
+<div class="footer">
+  Alexander AI Integrated Solutions — Build With AI Course<br>
+  Generated May 04, 2026 | Course content by Jay Alexander
+</div>
+
+</body>
+</html>

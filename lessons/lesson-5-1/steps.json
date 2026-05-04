@@ -1,0 +1,80 @@
+{
+  "lesson_id": "5-1",
+  "title": "Lesson 5.1 \u2014 Pick Your Business Playbook",
+  "captured_at": "2026-05-04T19:22:13.470579",
+  "screenshot_count": 6,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Playbook A: Food & Bakery Businesses",
+      "desc": "If you run a food business, here's your playbook."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-playbook-food.png",
+      "caption": "Playbook A: Food & Bakery \u2014 What to Build",
+      "desc": "If you run a food business (bakery, catering, meal prep, restaurant), this is your stack: (1) Online order form with pickup date and special instructions, (2) AI agent on your website to answer menu questions 24/7, (3) Automated text when order is ready, (4) Dashboard to manage all orders in one place. Sweet Spot Cakes is the live proof of concept."
+    },
+    {
+      "action": "navigate",
+      "url": "https://contractor-pro-ai-production.up.railway.app",
+      "caption": "Playbook B: Contractors & Service Businesses",
+      "desc": "If you run a service business, here's your stack."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-playbook-contractor.png",
+      "caption": "Playbook B: Contractors & Service Businesses",
+      "desc": "If you run a contracting, cleaning, landscaping, or other service business: (1) Online job request form with photo upload, (2) AI agent that answers questions and collects lead info, (3) Automated quote generation, (4) Customer notification when job is scheduled and when it's complete. Contractor Pro is the live example."
+    },
+    {
+      "action": "navigate",
+      "url": "https://billy-floods.up.railway.app",
+      "caption": "Playbook C: Insurance & Claims",
+      "desc": "If you work in insurance or legal, here's your stack."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-playbook-claims.png",
+      "caption": "Playbook C: Insurance, Legal & Documentation",
+      "desc": "If you work in insurance, legal, or any field where you collect documentation from clients: (1) Guided intake form that walks clients through exactly what to submit, (2) AI agent that explains the process and answers questions, (3) Document checklist with upload functionality, (4) Case tracking dashboard. FloodClaim Pro is the live example."
+    },
+    {
+      "action": "navigate",
+      "url": "https://pet-vet-ai-production.up.railway.app",
+      "caption": "Playbook D: Health & Wellness",
+      "desc": "If you're in health, wellness, or pet care."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-playbook-health.png",
+      "caption": "Playbook D: Health, Wellness & Pet Care",
+      "desc": "If you run a wellness business, veterinary practice, or health service: (1) AI agent that does initial intake and symptom assessment, (2) Appointment request form, (3) Location-based service finder, (4) Follow-up reminders. Pet Vet AI is the live proof \u2014 it finds vets near you and uses AI to help assess your pet's needs."
+    },
+    {
+      "action": "navigate",
+      "url": "https://shop.alexanderai.site",
+      "caption": "Playbook E: E-Commerce & Drop Shipping",
+      "desc": "If you sell products online."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-playbook-ecommerce.png",
+      "caption": "Playbook E: E-Commerce & Drop Shipping",
+      "desc": "If you sell products online: (1) Product catalog with one-click import from suppliers, (2) AI agent that recommends products based on customer needs, (3) Automated order fulfillment via CJ Dropshipping or similar, (4) Order tracking with automated customer notifications. The Drop Shipping app is the live example."
+    },
+    {
+      "action": "navigate",
+      "url": "https://jay-portfolio-production.up.railway.app",
+      "caption": "Your Playbook + AI Agent + Notifications = Done",
+      "desc": "Every playbook follows the same architecture."
+    },
+    {
+      "action": "screenshot",
+      "filename": "06-all-playbooks.png",
+      "caption": "Every Playbook Lives in the Same Dashboard",
+      "desc": "Regardless of which playbook you follow, the end result is the same: your app is live, monitored, and showing up in a dashboard like this. By the end of this module you'll have identified exactly which playbook fits your business and know precisely what to build next. The architecture is the same. The details are yours."
+    }
+  ]
+}

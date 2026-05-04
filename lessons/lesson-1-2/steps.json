@@ -1,0 +1,56 @@
+{
+  "lesson_id": "1-2",
+  "title": "Lesson 1.2 \u2014 Your Business Automation Map",
+  "captured_at": "2026-05-04T19:19:58.788525",
+  "screenshot_count": 4,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Example: Sweet Spot Cakes Before the App",
+      "desc": "Let's walk through a real example of how a business problem becomes an app."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-sweet-spot-homepage.png",
+      "caption": "Sweet Spot Cakes \u2014 A Real Business Problem Solved",
+      "desc": "Before this app, the owner handled every order by phone and text message. Customers called at all hours. Orders got lost. Payment was cash or Venmo. Sound familiar? This app solved every one of those problems. Here's how we mapped it."
+    },
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app/order",
+      "caption": "The Order Form \u2014 Old Problem, New Solution",
+      "desc": "What used to be a phone call is now a structured form."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-order-form.png",
+      "caption": "The Order Form \u2014 Customers Fill It Out Themselves",
+      "desc": "Instead of taking orders by phone, customers fill this out online \u2014 any time, 24/7. Cake type, size, flavors, pickup date, special instructions \u2014 all captured in one place. No more missed calls. No more lost orders. The business owner checks their dashboard in the morning and sees every order."
+    },
+    {
+      "action": "navigate",
+      "url": "https://contractor-pro-ai-production.up.railway.app",
+      "caption": "Another Example: Contractor Pro",
+      "desc": "Same pattern for a service business."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-contractor-problem-solved.png",
+      "caption": "Contractor Pro \u2014 Job Requests Without Phone Tag",
+      "desc": "Contractors spend hours playing phone tag with potential clients. This app captures job requests, collects photos, generates quotes, and tracks jobs \u2014 all online. The automation map was simple: Customer contacts you \u2192 instead of a call, they fill a form \u2192 the AI drafts a quote \u2192 you approve it \u2192 it goes out automatically."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "The AI Layer \u2014 Adding an Agent On Top",
+      "desc": "Every app can have an AI agent added to it."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-ai-layer.png",
+      "caption": "The AI Layer \u2014 Your Agent Works When You Don't",
+      "desc": "Once your app is live, you add an AI agent on top of it. The agent answers questions, collects information, and hands off to the app \u2014 24 hours a day, 7 days a week. Your job is to check in on what's happening, not to be the first line of contact for every customer."
+    }
+  ]
+}

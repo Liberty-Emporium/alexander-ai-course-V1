@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 2.2 — Writing Your System Prompt — Alexander AI Course</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .header p { font-size: 1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .intro-box {
+    background: #1e2535;
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro-box h2 { font-size: 1.1rem; color: #a5b4fc; margin-bottom: 0.5rem; }
+  .intro-box p { color: #94a3b8; font-size: 0.92rem; }
+  .steps-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .step-card {
+    background: #1e2535;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .step-card:hover { border-color: rgba(99,102,241,0.4); }
+  .step-card.milestone {
+    border-color: rgba(34,197,94,0.5);
+    background: #0f1e12;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step-num {
+    background: #6366f1;
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.82rem; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .milestone .step-num {
+    background: #16a34a;
+    font-size: 0.9rem;
+  }
+  .step-caption { font-size: 1rem; font-weight: 600; color: #f1f5f9; }
+  .screenshot {
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #0a0c14;
+  }
+  .step-desc {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    color: #374151;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 3rem;
+  }
+  .tip-box {
+    background: #172033;
+    border-left: 3px solid #6366f1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .tip-box strong { color: #a5b4fc; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">BUILD WITH AI — Alexander AI Method</div>
+  <h1>Lesson 2.2 — Writing Your System Prompt</h1>
+  <p>The most important skill: how to tell your agent exactly who it is and what to do</p>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    <h2>What You'll Do In This Lesson</h2>
+    <p>Follow each step exactly as shown. Every screenshot is taken from the real app you'll be using.
+    By the end of this lesson, you'll have completed the action shown in the title above.</p>
+  </div>
+
+  <div class="steps-grid">
+    
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">1</span>
+                <h3 class="step-caption">Step 1: Open the Agent Widget</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to the platform where we'll build.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">2</span>
+                <h3 class="step-caption">What Is a System Prompt?</h3>
+            </div>
+            <img src="01-intro.png" alt="What Is a System Prompt?" class="screenshot" />
+            <p class="step-desc">Before we open the form, understand this: the system prompt is the single most important thing you'll write for your AI agent. It determines everything — how it sounds, what it says, what it refuses to say, and how helpful it is. A bad system prompt = a frustrating bot. A great system prompt = a superstar employee who works 24/7.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">3</span>
+                <h3 class="step-caption">Step 2: Open the New Agent Form</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to the agent creation form.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">4</span>
+                <h3 class="step-caption">Step 2: The System Prompt Field</h3>
+            </div>
+            <img src="02-system-prompt-field.png" alt="Step 2: The System Prompt Field" class="screenshot" />
+            <p class="step-desc">This is the System Prompt field — the big text area in the middle of the form. It's the secret instruction that shapes everything your agent says. The customer never sees it. Only the agent does. It reads this before every single conversation.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">5</span>
+                <h3 class="step-caption">Step 3: A Complete System Prompt</h3>
+            </div>
+            <img src="03-prompt-filled.png" alt="Step 3: A Complete System Prompt" class="screenshot" />
+            <p class="step-desc">This is a complete system prompt. Notice it covers four things: Identity (who the agent is), Job (what it does), Tone (how it speaks), Rules (what it won't do). That four-part structure is all you need for 90% of business agents. Copy this template and fill in your business details.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">6</span>
+                <h3 class="step-caption">Step 4: Test Your Prompt With ChatGPT First</h3>
+            </div>
+            
+            <p class="step-desc">Before building, test your system prompt in ChatGPT.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">7</span>
+                <h3 class="step-caption">Step 4: Pro Tip — Test Your Prompt in ChatGPT First</h3>
+            </div>
+            <img src="04-test-with-chatgpt.png" alt="Step 4: Pro Tip — Test Your Prompt in ChatGPT First" class="screenshot" />
+            <p class="step-desc">Here's a pro tip: before putting your system prompt into the Agent Widget, test it in ChatGPT first. Paste your prompt as the first message, then pretend to be a customer. Ask it tough questions. See how it responds. Refine it until it sounds exactly right. This saves you time and makes your live agent much better from day one.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">8</span>
+                <h3 class="step-caption">Step 5: Back to Agent Widget — Ready to Build</h3>
+            </div>
+            
+            <p class="step-desc">With your tested system prompt, go back and build.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">9</span>
+                <h3 class="step-caption">Step 5: You Know How to Write a System Prompt</h3>
+            </div>
+            <img src="05-back-to-build.png" alt="Step 5: You Know How to Write a System Prompt" class="screenshot" />
+            <p class="step-desc">You now know the most important skill in AI agent building: how to write a system prompt that makes your agent sound exactly right for your business. In the next lesson, we deploy it live. Let's go.</p>
+        </div>
+        
+  </div>
+
+  <div class="tip-box">
+    <strong>Tip:</strong> If something looks slightly different on your screen, the app may have been
+    updated. The core steps are always the same — look for the same buttons and fields.
+  </div>
+</div>
+
+<div class="footer">
+  Alexander AI Integrated Solutions — Build With AI Course<br>
+  Generated May 04, 2026 | Course content by Jay Alexander
+</div>
+
+</body>
+</html>

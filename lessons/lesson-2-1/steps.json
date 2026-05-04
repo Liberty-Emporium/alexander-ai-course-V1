@@ -1,0 +1,68 @@
+{
+  "lesson_id": "2-1",
+  "title": "Lesson 2.1 \u2014 Setting Up Your OpenRouter Account",
+  "captured_at": "2026-05-04T19:20:16.742985",
+  "screenshot_count": 5,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://openrouter.ai",
+      "caption": "Step 1: Go to OpenRouter.ai",
+      "desc": "OpenRouter is the gateway to every major AI model \u2014 GPT-4, Claude, Gemini, and more."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-openrouter-home.png",
+      "caption": "Step 1: OpenRouter Homepage",
+      "desc": "OpenRouter is the service that powers your AI agents. Think of it as the electricity for your agents \u2014 without it, they don't run. The good news: getting set up is free and takes about 3 minutes. Click 'Sign In' in the top right."
+    },
+    {
+      "action": "navigate",
+      "url": "https://openrouter.ai/sign-in",
+      "caption": "Step 2: Create Your Account",
+      "desc": "Sign up for OpenRouter."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-openrouter-signin.png",
+      "caption": "Step 2: Sign Up Page",
+      "desc": "Click 'Sign Up' and create your account. You can use Google, GitHub, or your email. Once signed in, you'll be taken to your dashboard. We need one thing from here: your API key."
+    },
+    {
+      "action": "navigate",
+      "url": "https://openrouter.ai/keys",
+      "caption": "Step 3: Get Your API Key",
+      "desc": "Navigate to the API keys section."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-openrouter-keys.png",
+      "caption": "Step 3: The API Keys Page",
+      "desc": "This is the API Keys page. Click '+ Create Key'. Give it a name like 'My First Agent' and click Create. You'll see a long string starting with sk-or-v1-... \u2014 that's your key. COPY IT NOW and save it somewhere safe (a notes app or password manager). You only see it once."
+    },
+    {
+      "action": "navigate",
+      "url": "https://openrouter.ai/models",
+      "caption": "Step 4: Browse the Available Models",
+      "desc": "See which AI models you can use with your key."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-openrouter-models.png",
+      "caption": "Step 4: All the AI Models Available to You",
+      "desc": "With your OpenRouter key, you have access to ALL of these models. GPT-4o, Claude 3.5, Gemini, Llama, Mistral \u2014 everything. Many have free tiers. We'll start with GPT-4o Mini for your agent \u2014 it's fast, cheap, and excellent for customer conversations. You can switch models any time without changing your agent's code."
+    },
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "Step 5: Back to Agent Widget \u2014 You're Ready",
+      "desc": "With your API key in hand, you're ready to create your first agent."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-ready-to-build.png",
+      "caption": "Step 5: You Have Everything You Need",
+      "desc": "You now have: (1) an OpenRouter account, (2) an API key copied and saved, (3) access to every major AI model. Head to the Agent Widget and let's build your first agent in the next lesson."
+    }
+  ]
+}

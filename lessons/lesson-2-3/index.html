@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 2.3 — Deploying Your Agent (Live in 20 Minutes) — Alexander AI Course</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .header p { font-size: 1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .intro-box {
+    background: #1e2535;
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro-box h2 { font-size: 1.1rem; color: #a5b4fc; margin-bottom: 0.5rem; }
+  .intro-box p { color: #94a3b8; font-size: 0.92rem; }
+  .steps-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .step-card {
+    background: #1e2535;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .step-card:hover { border-color: rgba(99,102,241,0.4); }
+  .step-card.milestone {
+    border-color: rgba(34,197,94,0.5);
+    background: #0f1e12;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step-num {
+    background: #6366f1;
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.82rem; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .milestone .step-num {
+    background: #16a34a;
+    font-size: 0.9rem;
+  }
+  .step-caption { font-size: 1rem; font-weight: 600; color: #f1f5f9; }
+  .screenshot {
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #0a0c14;
+  }
+  .step-desc {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    color: #374151;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 3rem;
+  }
+  .tip-box {
+    background: #172033;
+    border-left: 3px solid #6366f1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .tip-box strong { color: #a5b4fc; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">BUILD WITH AI — Alexander AI Method</div>
+  <h1>Lesson 2.3 — Deploying Your Agent (Live in 20 Minutes)</h1>
+  <p>Watch every step: create an agent, configure it, and get a live URL</p>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    <h2>What You'll Do In This Lesson</h2>
+    <p>Follow each step exactly as shown. Every screenshot is taken from the real app you'll be using.
+    By the end of this lesson, you'll have completed the action shown in the title above.</p>
+  </div>
+
+  <div class="steps-grid">
+    
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">1</span>
+                <h3 class="step-caption">Step 1: Go to the AI Agent Widget platform</h3>
+            </div>
+            
+            <p class="step-desc">This is where you create and manage your AI agents.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">2</span>
+                <h3 class="step-caption">Step 1: The AI Agent Widget Homepage</h3>
+            </div>
+            <img src="01-homepage.png" alt="Step 1: The AI Agent Widget Homepage" class="screenshot" />
+            <p class="step-desc">This is the homepage. Notice it says 'Add an AI Agent to Any Website in 60 Seconds' — that's exactly what we're going to do. Click 'Login' in the top right to get started.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">3</span>
+                <h3 class="step-caption">Step 2: Go to the Login Page</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to the login page.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">4</span>
+                <h3 class="step-caption">Step 2: The Login Page</h3>
+            </div>
+            <img src="02-login-page.png" alt="Step 2: The Login Page" class="screenshot" />
+            <p class="step-desc">Enter the email and password your instructor set up for you. For course participants, accounts are pre-created. Type your email in the top field and your password below it.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">5</span>
+                <h3 class="step-caption">Step 4: Login details filled in</h3>
+            </div>
+            <img src="03-login-filled.png" alt="Step 4: Login details filled in" class="screenshot" />
+            <p class="step-desc">Both fields are filled in. Now click Sign In to go to your dashboard.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">6</span>
+                <h3 class="step-caption">Step 5: Your Dashboard</h3>
+            </div>
+            <img src="04-dashboard.png" alt="Step 5: Your Dashboard" class="screenshot" />
+            <p class="step-desc">Welcome to your dashboard! This is where all your agents live. It's empty right now — that's fine. By the end of this lesson, your first agent will appear here. Click 'New Agent' to get started.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">7</span>
+                <h3 class="step-caption">Step 6: Open the New Agent Form</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to the create agent form.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">8</span>
+                <h3 class="step-caption">Step 6: The Agent Creation Form</h3>
+            </div>
+            <img src="05-new-agent-form.png" alt="Step 6: The Agent Creation Form" class="screenshot" />
+            <p class="step-desc">This form is where you configure everything about your agent. Take a moment to look at what's here: Agent Name, Tagline, Brand Color, Avatar Emoji, System Prompt, AI Model, and API Key. We'll fill each one in together.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">9</span>
+                <h3 class="step-caption">Step 8: Name and Tagline filled in</h3>
+            </div>
+            <img src="06-name-tagline-filled.png" alt="Step 8: Name and Tagline filled in" class="screenshot" />
+            <p class="step-desc">Good — your agent has a name and tagline. Now the most important part: the System Prompt. It's the text box below. Scroll down to see it.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">10</span>
+                <h3 class="step-caption">Step 9: System Prompt entered</h3>
+            </div>
+            <img src="07-system-prompt-filled.png" alt="Step 9: System Prompt entered" class="screenshot" />
+            <p class="step-desc">Notice the structure: WHO the agent is (Aria), WHAT it does (welcome, answer, collect info), and the RULES it follows (no made-up prices, keep it short). This structure works for any business — just swap in your details.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">11</span>
+                <h3 class="step-caption">Step 10: Choose Your Avatar Emoji</h3>
+            </div>
+            <img src="08-emoji-picker-open.png" alt="Step 10: Choose Your Avatar Emoji" class="screenshot" />
+            <p class="step-desc">The emoji picker shows categories across the top — Faces, People, Animals, Food, and more. Click any emoji to select it. Pick something that fits your brand: robot for tech, flower for a spa, cake for a bakery, house for real estate. This emoji appears in the chat widget header.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">12</span>
+                <h3 class="step-caption">Step 11: Choose Your AI Model</h3>
+            </div>
+            <img src="09-model-selection.png" alt="Step 11: Choose Your AI Model" class="screenshot" />
+            <p class="step-desc">Here you choose which AI brain powers your agent. GPT-4o Mini is the best starting point for most businesses — it's fast, affordable, and great at customer conversations. You can always switch to a more powerful model like Claude or GPT-4o later as your needs grow.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">13</span>
+                <h3 class="step-caption">Step 12: Enter Your OpenRouter API Key</h3>
+            </div>
+            <img src="10-api-key-field.png" alt="Step 12: Enter Your OpenRouter API Key" class="screenshot" />
+            <p class="step-desc">This is the only field requiring setup outside this app. Your OpenRouter API key connects your agent to the AI models. Getting one is free and takes 2 minutes: (1) Go to openrouter.ai/keys, (2) Sign up with Google or email, (3) Click 'Create Key', (4) Copy it and paste it here. Your key is stored encrypted and never shared.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">14</span>
+                <h3 class="step-caption">Step 12: API Key entered</h3>
+            </div>
+            <img src="11-api-key-entered.png" alt="Step 12: API Key entered" class="screenshot" />
+            <p class="step-desc">The key shows as dots for security. The Allowed Origins field is set to * by default — leave it as-is. This means your agent works on any website. You can lock it to your specific domain later once you know where you're embedding it.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">15</span>
+                <h3 class="step-caption">Step 13: Everything Set — Click Create Agent</h3>
+            </div>
+            <img src="12-ready-to-create.png" alt="Step 13: Everything Set — Click Create Agent" class="screenshot" />
+            <p class="step-desc">All fields are filled: Name, Tagline, System Prompt, Emoji, AI Model, and API Key. One click and your agent goes live on the internet. Click the purple 'Create Agent' button.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">16</span>
+                <h3 class="step-caption">Step 13: Agent Created</h3>
+            </div>
+            <img src="13-agent-created.png" alt="Step 13: Agent Created" class="screenshot" />
+            <p class="step-desc">Your agent has been created. You'll see the agent detail page with its configuration and a public chat link.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 14: Back to Dashboard</h3>
+            </div>
+            
+            <p class="step-desc">Navigate back to the dashboard.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 14: Your Dashboard with Your First Agent</h3>
+            </div>
+            <img src="14-dashboard-with-agent.png" alt="Step 14: Your Dashboard with Your First Agent" class="screenshot" />
+            <p class="step-desc">Your agent now lives on your dashboard. You can click it to edit, view analytics, get the embed code, or share the public chat link. Every agent you build in this course will appear here.</p>
+        </div>
+        
+  </div>
+
+  <div class="tip-box">
+    <strong>Tip:</strong> If something looks slightly different on your screen, the app may have been
+    updated. The core steps are always the same — look for the same buttons and fields.
+  </div>
+</div>
+
+<div class="footer">
+  Alexander AI Integrated Solutions — Build With AI Course<br>
+  Generated May 04, 2026 | Course content by Jay Alexander
+</div>
+
+</body>
+</html>

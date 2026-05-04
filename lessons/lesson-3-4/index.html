@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 3.4 — Deploying Your App to Railway — Alexander AI Course</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1117;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .header h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; }
+  .header p { font-size: 1rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+  .intro-box {
+    background: #1e2535;
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .intro-box h2 { font-size: 1.1rem; color: #a5b4fc; margin-bottom: 0.5rem; }
+  .intro-box p { color: #94a3b8; font-size: 0.92rem; }
+  .steps-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+  .step-card {
+    background: #1e2535;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .step-card:hover { border-color: rgba(99,102,241,0.4); }
+  .step-card.milestone {
+    border-color: rgba(34,197,94,0.5);
+    background: #0f1e12;
+  }
+  .step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .step-num {
+    background: #6366f1;
+    color: white;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.82rem; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .milestone .step-num {
+    background: #16a34a;
+    font-size: 0.9rem;
+  }
+  .step-caption { font-size: 1rem; font-weight: 600; color: #f1f5f9; }
+  .screenshot {
+    width: 100%;
+    display: block;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: #0a0c14;
+  }
+  .step-desc {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .footer {
+    text-align: center;
+    padding: 2rem;
+    color: #374151;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 3rem;
+  }
+  .tip-box {
+    background: #172033;
+    border-left: 3px solid #6366f1;
+    padding: 1rem 1.25rem;
+    border-radius: 0 8px 8px 0;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #94a3b8;
+  }
+  .tip-box strong { color: #a5b4fc; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">BUILD WITH AI — Alexander AI Method</div>
+  <h1>Lesson 3.4 — Deploying Your App to Railway</h1>
+  <p>Go from local code to a live URL anyone in the world can visit</p>
+</div>
+
+<div class="container">
+  <div class="intro-box">
+    <h2>What You'll Do In This Lesson</h2>
+    <p>Follow each step exactly as shown. Every screenshot is taken from the real app you'll be using.
+    By the end of this lesson, you'll have completed the action shown in the title above.</p>
+  </div>
+
+  <div class="steps-grid">
+    
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">1</span>
+                <h3 class="step-caption">Step 1: Go to railway.com</h3>
+            </div>
+            
+            <p class="step-desc">Railway is the hosting platform where your app will live on the internet. It's free to start — no credit card needed for the free tier.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">2</span>
+                <h3 class="step-caption">Step 1: Railway Homepage</h3>
+            </div>
+            <img src="01-railway-homepage.png" alt="Step 1: Railway Homepage" class="screenshot" />
+            <p class="step-desc">This is Railway. It's where thousands of developers deploy their apps. Notice the tagline — 'Deploy apps globally, instantly'. That's exactly what we're doing. Click 'Login' in the top right to get started.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">3</span>
+                <h3 class="step-caption">Step 2: Go to Login</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to the Railway login page.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">4</span>
+                <h3 class="step-caption">Step 2: Railway Login Page</h3>
+            </div>
+            <img src="02-railway-login.png" alt="Step 2: Railway Login Page" class="screenshot" />
+            <p class="step-desc">Railway lets you sign in with GitHub, Google, or email. We strongly recommend GitHub — it connects your code repository to Railway automatically, which is how you deploy later. If you don't have GitHub yet, we'll set that up first.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 3: GitHub — Where Your Code Lives</h3>
+            </div>
+            
+            <p class="step-desc">GitHub is where your code is stored before Railway deploys it.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">6</span>
+                <h3 class="step-caption">Step 3: GitHub Homepage</h3>
+            </div>
+            <img src="03-github-homepage.png" alt="Step 3: GitHub Homepage" class="screenshot" />
+            <p class="step-desc">GitHub is your code's home. Think of it like Google Drive for your app's files. Every time you save (push) your code to GitHub, Railway can pick it up and redeploy automatically. Sign up at github.com if you haven't — it's free.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">7</span>
+                <h3 class="step-caption">Step 4: Create a New GitHub Repository</h3>
+            </div>
+            
+            <p class="step-desc">Navigate to create a new repository on GitHub.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">8</span>
+                <h3 class="step-caption">Step 4: Create a New GitHub Repository</h3>
+            </div>
+            <img src="04-github-new-repo.png" alt="Step 4: Create a New GitHub Repository" class="screenshot" />
+            <p class="step-desc">This is where you create a new repository (a 'repo') — basically a folder in the cloud for your app's code. Fill in: (1) Repository name — use your app name, no spaces (e.g. my-cake-shop), (2) Set it to Private, (3) Leave everything else as-is. Then click 'Create repository'.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">9</span>
+                <h3 class="step-caption">Step 5: Push Your Code to GitHub</h3>
+            </div>
+            
+            <p class="step-desc">After creating the repo, GitHub shows you the commands to push your code.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">10</span>
+                <h3 class="step-caption">Step 5: The Push Commands</h3>
+            </div>
+            <img src="05-github-push-commands.png" alt="Step 5: The Push Commands" class="screenshot" />
+            <p class="step-desc">After creating your repo, GitHub shows you the exact commands to push your code. You'll run these three commands in your terminal from your app folder. Don't worry — I'll walk you through each one.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">11</span>
+                <h3 class="step-caption">Step 6: Back to Railway — Create New Project</h3>
+            </div>
+            
+            <p class="step-desc">Navigate back to Railway to start a new project.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">12</span>
+                <h3 class="step-caption">Step 6: Railway Dashboard — New Project</h3>
+            </div>
+            <img src="06-railway-new-project.png" alt="Step 6: Railway Dashboard — New Project" class="screenshot" />
+            <p class="step-desc">Once logged in to Railway, you'll see your dashboard. Click '+ New Project' to start deploying your app. Railway is about to connect to your GitHub and pull your code.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">13</span>
+                <h3 class="step-caption">Step 7: Deploy from GitHub Repo</h3>
+            </div>
+            
+            <p class="step-desc">On the new project screen, Railway gives you several options.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">14</span>
+                <h3 class="step-caption">Step 7: Choose 'Deploy from GitHub Repo'</h3>
+            </div>
+            <img src="07-railway-deploy-options.png" alt="Step 7: Choose 'Deploy from GitHub Repo'" class="screenshot" />
+            <p class="step-desc">Railway gives you several ways to start. Click 'Deploy from GitHub Repo'. Railway will ask permission to access your GitHub account the first time — click Authorize. Then you'll see a list of your repositories.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">15</span>
+                <h3 class="step-caption">Step 8: Setting Environment Variables</h3>
+            </div>
+            
+            <p class="step-desc">After connecting your GitHub repo, Railway starts your first deploy. Before it fully works, you need to add environment variables. In your Railway service: click Variables → Add Variable. You need at minimum: SECRET_KEY (paste any long random text — this is your app's security key) and PORT set to 5000. These are private and never visible in your code.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">16</span>
+                <h3 class="step-caption">Step 8: Railway Login — Sign In With GitHub</h3>
+            </div>
+            <img src="08-railway-env-vars.png" alt="Step 8: Railway Login — Sign In With GitHub" class="screenshot" />
+            <p class="step-desc">When you first go to railway.com/new, Railway asks you to log in. Click 'Continue with GitHub'. This grants Railway permission to read your repositories so it can deploy your code. You only do this once.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 9: A Real Live App on Railway</h3>
+            </div>
+            
+            <p class="step-desc">This is what success looks like.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">18</span>
+                <h3 class="step-caption">Step 9: This is What Your Deployed App Looks Like</h3>
+            </div>
+            <img src="09-live-app-example.png" alt="Step 9: This is What Your Deployed App Looks Like" class="screenshot" />
+            <p class="step-desc">This is Sweet Spot Custom Cakes — a real app built using this exact process and deployed on Railway. It has a real URL, runs 24/7, and was built using the same method you're learning right now. Your app will look just like this — with your business name, your colors, and your data.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">19</span>
+                <h3 class="step-caption">Step 10: The Health Check Endpoint</h3>
+            </div>
+            
+            <p class="step-desc">Every app we build includes a /health endpoint.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">20</span>
+                <h3 class="step-caption">Step 10: The /health Endpoint — Your App's Pulse</h3>
+            </div>
+            <img src="10-health-check.png" alt="Step 10: The /health Endpoint — Your App's Pulse" class="screenshot" />
+            <p class="step-desc">Every app you build includes a /health endpoint at yourapp.up.railway.app/health. It returns a simple JSON response: status: ok. Railway uses this to confirm your app started correctly. If it returns ok, your deploy succeeded. If it fails, Railway shows you the error in the build log so you can fix it.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 11: Another Live App — Contractor Pro AI</h3>
+            </div>
+            
+            <p class="step-desc">Every app in this course is already live on Railway.</p>
+        </div>
+        
+        <div class="step-card milestone">
+            <div class="step-header">
+                <span class="step-num">★</span>
+                <h3 class="step-caption">Step 11: Contractor Pro AI — Also Live on Railway</h3>
+            </div>
+            <img src="11-contractor-app.png" alt="Step 11: Contractor Pro AI — Also Live on Railway" class="screenshot" />
+            <p class="step-desc">Here's another example: Contractor Pro AI — a full job request and quoting app for contractors, built and deployed on Railway using this same process. Notice the URL: contractor-pro-ai-production.up.railway.app. Every app you build in this course gets a URL like this. Real. Live. Shareable.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">23</span>
+                <h3 class="step-caption">Step 12: The Update Workflow</h3>
+            </div>
+            
+            <p class="step-desc">Once deployed, updating is effortless.</p>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-header">
+                <span class="step-num">24</span>
+                <h3 class="step-caption">Step 12: Your Update Workflow From Here</h3>
+            </div>
+            <img src="12-railway-redeploy.png" alt="Step 12: Your Update Workflow From Here" class="screenshot" />
+            <p class="step-desc">Once your app is live, updating it is simple. Make a change in your code → push it to GitHub → Railway detects the push and redeploys automatically. No manual steps. No server management. No downtime. Railway handles all of it. Your workflow becomes: code it, push it, it's live.</p>
+        </div>
+        
+  </div>
+
+  <div class="tip-box">
+    <strong>Tip:</strong> If something looks slightly different on your screen, the app may have been
+    updated. The core steps are always the same — look for the same buttons and fields.
+  </div>
+</div>
+
+<div class="footer">
+  Alexander AI Integrated Solutions — Build With AI Course<br>
+  Generated May 04, 2026 | Course content by Jay Alexander
+</div>
+
+</body>
+</html>

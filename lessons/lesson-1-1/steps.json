@@ -1,0 +1,80 @@
+{
+  "lesson_id": "1-1",
+  "title": "Lesson 1.1 \u2014 What Is an AI Agent?",
+  "captured_at": "2026-05-04T19:19:48.853016",
+  "screenshot_count": 6,
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://ai.widget.alexanderai.site",
+      "caption": "Step 1: Meet a Real AI Agent Platform",
+      "desc": "This is the Alexander AI Agent Widget \u2014 a platform Jay built to deploy AI agents to any website. We're looking at a live agent platform before we build one."
+    },
+    {
+      "action": "screenshot",
+      "filename": "01-agent-widget-home.png",
+      "caption": "Step 1: A Real AI Platform \u2014 Built by a Business Owner",
+      "desc": "Jay Alexander built this entire platform himself using AI. No developer hired. No agency. This is what you'll be able to do by the end of this course."
+    },
+    {
+      "action": "navigate",
+      "url": "https://billy-floods.up.railway.app",
+      "caption": "Step 2: A Real Business App \u2014 FloodClaim Pro",
+      "desc": "FloodClaim Pro helps homeowners file insurance claims after flooding. Built with AI."
+    },
+    {
+      "action": "screenshot",
+      "filename": "02-floodclaim-app.png",
+      "caption": "Step 2: FloodClaim Pro \u2014 Real App, Real Users",
+      "desc": "This app is live right now. It has a database, a login system, a dashboard, and a workflow. A business owner built this with AI. You'll learn exactly how."
+    },
+    {
+      "action": "navigate",
+      "url": "https://sweet-spot-cakes.up.railway.app",
+      "caption": "Step 3: Sweet Spot Custom Cakes",
+      "desc": "A custom cake ordering app for a small bakery."
+    },
+    {
+      "action": "screenshot",
+      "filename": "03-sweet-spot-app.png",
+      "caption": "Step 3: A Custom App for a Small Business",
+      "desc": "Sweet Spot Custom Cakes lets customers order custom cakes, track their order, and get notified when it's ready. This is what YOUR business could have \u2014 not generic software, something built exactly for you."
+    },
+    {
+      "action": "navigate",
+      "url": "https://contractor-pro-ai-production.up.railway.app",
+      "caption": "Step 4: Contractor Pro AI",
+      "desc": "Built for contractors and service businesses."
+    },
+    {
+      "action": "screenshot",
+      "filename": "04-contractor-app.png",
+      "caption": "Step 4: Contractor Pro AI \u2014 Built for Service Businesses",
+      "desc": "Contractor Pro AI helps contractors manage jobs, generate quotes, and communicate with clients. Every app you've seen was built by one person using AI tools \u2014 your instructor. You're next."
+    },
+    {
+      "action": "navigate",
+      "url": "https://pet-vet-ai-production.up.railway.app",
+      "caption": "Step 5: Pet Vet AI",
+      "desc": "An AI-powered vet finder for pet owners."
+    },
+    {
+      "action": "screenshot",
+      "filename": "05-petvet-app.png",
+      "caption": "Step 5: Pet Vet AI \u2014 Find a Vet Anywhere in the World",
+      "desc": "Pet Vet AI uses your location to find nearby veterinarians and lets AI help you assess your pet's symptoms. Built with AI, deployed on Railway. Notice the polished design \u2014 this is what AI-assisted development looks like in 2025."
+    },
+    {
+      "action": "navigate",
+      "url": "https://jay-portfolio-production.up.railway.app",
+      "caption": "Step 6: The Full Portfolio Dashboard",
+      "desc": "The dashboard that connects all of Jay's apps."
+    },
+    {
+      "action": "screenshot",
+      "filename": "06-ecdash-portfolio.png",
+      "caption": "Step 6: Your Instructor's App Network \u2014 14 Live Apps",
+      "desc": "This is what the end of the journey looks like. Fourteen live apps, all connected, all monitored, all built using AI. By the end of this course you'll have your first one. Let's get started."
+    }
+  ]
+}
